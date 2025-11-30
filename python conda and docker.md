@@ -25,6 +25,50 @@ The most widely recommended tool for managing multiple Python versions on a sing
 ### 4. Deactivate the environment: 
 ```conda deactivate```
 
+## Docker
+### 1. Build an image:
+```docker build -t my-image-name .```
+### 2. Run a container:
+```docker run -p 80:80 my-image-name```
+### 3. List running containers:
+```docker ps```
+### 4. List all containers (running and stopped):
+```docker ps -a```
+### 5. Stop a running container:
+```docker stop <container-id-or-name>```
+### 6. Remove a stopped container:
+```docker rm <container-id-or-name>```
+### 7. List images:
+```docker images```
+### 8. Remove an image:
+```docker rmi <image-id-or-name>```
+### 9. Execute a command in a running container:
+```docker exec -it <container-id-or-name> bash```
+### 10. View container logs:
+```docker logs <container-id-or-name>```
+### 11. Pull an image:
+```docker pull <image-name>:<tag>```
+### 12. Run an image:
+```docker run <image-name>:<tag>```
+### 13. Push an image:
+```docker push <image-name>:<tag>```
+### 14. Docker Compose
+```yaml
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    command: python app.py
+```
+### 15. Run Docker Compose:
+```docker-compose up -d```
+### 16. Stop Docker Compose:
+```docker-compose down```
+
 
 
 
