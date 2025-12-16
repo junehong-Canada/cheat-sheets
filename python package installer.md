@@ -10,6 +10,8 @@
 #### Show installed package's information
 ```pip show <package_name>```
 
+
+
 ## To install a Python package from its source code
 - Open a terminal or command prompt and navigate to the root directory of the extracted source code. This directory typically contains a __setup.py__ file.
 - Install in Editable Mode (Recommended for Development) ```python3 -m pip install -e . ```
